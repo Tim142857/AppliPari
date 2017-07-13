@@ -34,9 +34,19 @@ var authorizationToken = "";
 
 //----------------------------    FUNCTIONS    ---------------------------------------------------------
 
-function genereView(template) {
+
+function genereView(template, callback) {
     $(".main-container").html(views[template]);
+
+    //Le callback est interprété comem une string et non comme une function
+    //trouve la funciton
+    if (true) {
+        console.log(typeof(callback));
+        console.log(callback);
+        callback();
+    }
 }
 function displayFlashBag(array) {
     alert(array.message);
 }
+
