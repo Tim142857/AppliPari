@@ -12,8 +12,8 @@ views['register.html.js'] = `
     <input type="email" class="form-control" name="email" id="inputEmail">
   </div>
   <div class="form-group">
-    <label for="inputPassword">Password</label>
-    <input type="password" class="form-control" name="password" id="inputPassword">
+    <label for="inputPlainPassword">Password</label>
+    <input type="password" class="form-control" name="plainPassword" id="inputPlainPassword">
   </div>
   <div class="form-group">
     <label for="inputConfirmPassword">Confirm Password</label>

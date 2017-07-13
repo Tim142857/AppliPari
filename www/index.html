@@ -13,6 +13,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
 <body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" data-target="home.html.js">Appli Paris</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#" data-target="parisDispos.html.js">Paris Dispos</span></a></li>
+                <li><a href="#" data-target="historique.html.js">Historique</a></li>
+                <li><a href="#" data-target="profil.html.js">Profil</a></li>
+                <li><a href="#" data-target="logout.html.js">Deconnexion</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
 <div class="container main-container">
     <h1>Connexion</h1>
     <form id="formLogin">
@@ -29,13 +57,21 @@
     <button type="button" class="btn btn-default" onclick="genereView('register.html.js')">
         S'inscrire
     </button>
+    <button type="button" class="btn btn-default" onclick="genereView('recoverPassword.html.js')">
+        Mot de passe oublié
+    </button>
 </div>
-<script type="text/javascript" src="cordova.js"></script>
+<!--<script type="text/javascript" src="cordova.js"></script>-->
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="partials/test.html.js"></script>
+
+<script type="text/javascript" src="partials/home.html.js"></script>
 <script type="text/javascript" src="partials/register.html.js"></script>
+<script type="text/javascript" src="partials/recoverPassword.html.js"></script>
+<script type="text/javascript" src="partials/logout.html.js"></script>
+<script type="text/javascript" src="partials/parisDispos.html.js"></script>
+<script type="text/javascript" src="partials/historique.html.js"></script>
 </body>
 </html>

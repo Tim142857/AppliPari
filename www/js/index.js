@@ -30,10 +30,13 @@ app.initialize();
 //----------------------------    PARAMETERS    ---------------------------------------------------------
 
 var views = [];
-var token="";
+var authorizationToken = "";
 
 //----------------------------    FUNCTIONS    ---------------------------------------------------------
 
 function genereView(template) {
     $(".main-container").html(views[template]);
+}
+function displayFlashBag(array) {
+    alert(array.message);
 }
