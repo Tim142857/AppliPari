@@ -110,10 +110,42 @@ function convertErrorsToString(errors) {
     }
     return string;
 }
-
-function genereModal(title, body, submitFunction, cancelFunction) {
-    $('.modal-title').text(title);
-    $('.modal-body').text(body);
+genereModal('title test', 'body!', {
+    valid: {text: 'Valider', functionName: 'functionValid'},
+    cancel: {text: "Annuler", functionName: 'functionCancel'}
+});
+function functionValid() {
+    alert('modal valid!');
 }
 
+function functionCancel() {
+    alert('modal canceled!');
+}
+
+$('#myModal').modal('show');
+
+// options
+//array= { valid:{text, functionName} , cancel:{text, functionName} }
+function genereModal(title, body, options) {
+    $('.modal-title').text(title);
+    $('.modal-body').text(body);
+    if (typeof options == "object") {
+        var html = "";
+        if ("valid" in options) {
+            if ("text" in options.valid && "functionName" in options.valid) {
+                html += "<button type='button' class='btn btn-primary btn-choice-modal' id='valid-modal' onclick='" + options.valid.functionName + "()" + "'>" + options.valid.text + "</button>";
+            }
+        }
+        if ("cancel" in options) {
+            if ("text" in options.cancel && "functionName" in options.cancel) {
+                html += "<button type='button' class='btn btn-primary btn-choice-modal' id='cancel-modal' onclick='" + options.cancel.functionName + "()" + "'>" + options.cancel.text + "</button>";
+            }
+        }
+        $('.modal-footer').append(html);
+    }
+}
+
+$('body').on('click', '.btn-choice-modal', function () {
+    $('#myModal').modal('hide');
+});
 

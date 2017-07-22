@@ -5,6 +5,7 @@ views['parisDispos.html.js'] = `
 `;
 
 
+
 var getParisDispos = function () {
     var data = {};
 
@@ -38,6 +39,7 @@ var getParisDispos = function () {
                 html += "</div>";
                 html += "</div>"
                 $('.main-container').append(html);
+                $(".pari-dispo-detail:not(:first)").addClass('hidden');
             }
         })
     };
